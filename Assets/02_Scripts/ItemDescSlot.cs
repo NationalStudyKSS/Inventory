@@ -1,10 +1,10 @@
-using TMPro;
+ï»¿using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 /// <summary>
-/// ¾ÆÀÌÅÛ ÅøÆÁÀ» º¸¿©ÁÖ´Â ½½·ÔÀ» ´ã´çÇÏ´Â Å¬·¡½º
-/// ÀÌ°Íµµ MVP ÆÐÅÏÀ» Àû¿ëÇØ¾ß ÇÏÁö¸¸ º°µµÀÇ »óÈ£ÀÛ¿ëÀÌ ¾øÀ¸¹Ç·Î ÀÏ´ÜÀº »ý·«
+/// ì•„ì´í…œ íˆ´íŒì„ ë³´ì—¬ì£¼ëŠ” ìŠ¬ë¡¯ì„ ë‹´ë‹¹í•˜ëŠ” í´ëž˜ìŠ¤
+/// ì´ê²ƒë„ MVP íŒ¨í„´ì„ ì ìš©í•´ì•¼ í•˜ì§€ë§Œ ë³„ë„ì˜ ìƒí˜¸ìž‘ìš©ì´ ì—†ìœ¼ë¯€ë¡œ ì¼ë‹¨ì€ ìƒëžµ
 /// </summary>
 public class ItemDescSlot : MonoBehaviour
 {
@@ -14,7 +14,7 @@ public class ItemDescSlot : MonoBehaviour
     [SerializeField] TextMeshProUGUI _itemDescText;
 
     /// <summary>
-    /// ¾ÆÀÌÅÛ ¸ðµ¨À» ¹Þ¾Æ¼­ ÇØ´ç ¸ðµ¨À» ±âÁØÀ¸·Î UI¸¦ °»½ÅÇÏ´Â ÇÔ¼ö
+    /// ì•„ì´í…œ ëª¨ë¸ì„ ë°›ì•„ì„œ í•´ë‹¹ ëª¨ë¸ì„ ê¸°ì¤€ìœ¼ë¡œ UIë¥¼ ê°±ì‹ í•˜ëŠ” í•¨ìˆ˜
     /// </summary>
     /// <param name="itemModel"></param>
     public void UpdateUI(ItemModel itemModel)

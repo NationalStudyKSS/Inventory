@@ -1,31 +1,31 @@
-using UnityEngine;
+ï»¿using UnityEngine;
 using UnityEngine.UI;
 
 /// <summary>
-/// ÀÎº¥Åä¸®¿¡¼­ ¾ÆÀÌÅÛÀ» µå·¡±× ÇÒ ¶§ µû¶ó´Ù´Ï´Â ½½·Ô
-/// ÀÌ ½½·Ô ÀÚÃ¼¿¡¼­´Â »óÈ£ÀÛ¿ëÀÌ ¾øÀ¸¹Ç·Î MVP ÆÐÅÏ Àû¿ë X
+/// ì¸ë²¤í† ë¦¬ì—ì„œ ì•„ì´í…œì„ ë“œëž˜ê·¸ í•  ë•Œ ë”°ë¼ë‹¤ë‹ˆëŠ” ìŠ¬ë¡¯
+/// ì´ ìŠ¬ë¡¯ ìžì²´ì—ì„œëŠ” ìƒí˜¸ìž‘ìš©ì´ ì—†ìœ¼ë¯€ë¡œ MVP íŒ¨í„´ ì ìš© X
 /// </summary>
 public class DraggingSlot : MonoBehaviour
 {
-    [SerializeField] Image _itemIcon; // µå·¡±× ÁßÀÎ ¾ÆÀÌÅÛÀÇ ¾ÆÀÌÄÜÀ» Ç¥½ÃÇÒ ÀÌ¹ÌÁö ÄÄÆ÷³ÍÆ®
+    [SerializeField] Image _itemIcon; // ë“œëž˜ê·¸ ì¤‘ì¸ ì•„ì´í…œì˜ ì•„ì´ì½˜ì„ í‘œì‹œí•  ì´ë¯¸ì§€ ì»´í¬ë„ŒíŠ¸
 
-    ItemModel _itemModel; // ½½·Ô¿¡ ÇÒ´çµÈ ¾ÆÀÌÅÛ ¸ðµ¨
-    int _fromSlotIndex; // ¾ÆÀÌÅÛÀÌ µå·¡±×µÈ ¿ø·¡ ½½·ÔÀÇ ÀÎµ¦½º
+    ItemModel _itemModel; // ìŠ¬ë¡¯ì— í• ë‹¹ëœ ì•„ì´í…œ ëª¨ë¸
+    int _fromSlotIndex; // ì•„ì´í…œì´ ë“œëž˜ê·¸ëœ ì›ëž˜ ìŠ¬ë¡¯ì˜ ì¸ë±ìŠ¤
 
-    public ItemModel ItemModel => _itemModel; // ½½·Ô¿¡ ÇÒ´çµÈ ¾ÆÀÌÅÛ ¸ðµ¨À» ¿ÜºÎ¿¡¼­ Á¢±ÙÇÒ ¼ö ÀÖ´Â ÇÁ·ÎÆÛÆ¼
-    public int FromSlotIndex => _fromSlotIndex; // ¾ÆÀÌÅÛÀÌ µå·¡±×µÈ ¿ø·¡ ½½·ÔÀÇ ÀÎµ¦½º¸¦ ¿ÜºÎ¿¡¼­ Á¢±ÙÇÒ ¼ö ÀÖ´Â ÇÁ·ÎÆÛÆ¼
+    public ItemModel ItemModel => _itemModel; // ìŠ¬ë¡¯ì— í• ë‹¹ëœ ì•„ì´í…œ ëª¨ë¸ì„ ì™¸ë¶€ì—ì„œ ì ‘ê·¼í•  ìˆ˜ ìžˆëŠ” í”„ë¡œí¼í‹°
+    public int FromSlotIndex => _fromSlotIndex; // ì•„ì´í…œì´ ë“œëž˜ê·¸ëœ ì›ëž˜ ìŠ¬ë¡¯ì˜ ì¸ë±ìŠ¤ë¥¼ ì™¸ë¶€ì—ì„œ ì ‘ê·¼í•  ìˆ˜ ìžˆëŠ” í”„ë¡œí¼í‹°
 
     /// <summary>
-    /// ¾ÆÀÌÅÛ ¸ðµ¨À» ¼³Á¤ÇÏ´Â ÇÔ¼ö
+    /// ì•„ì´í…œ ëª¨ë¸ì„ ì„¤ì •í•˜ëŠ” í•¨ìˆ˜
     /// </summary>
-    /// <param name="itemModel">Äü½½·Ô¿¡ ³Ö¾îÁÙ ¾ÆÀÌÅÛ ¸ðµ¨</param>
+    /// <param name="itemModel">í€µìŠ¬ë¡¯ì— ë„£ì–´ì¤„ ì•„ì´í…œ ëª¨ë¸</param>
     public void SetItemModel(ItemModel itemModel)
     {
         _itemModel = itemModel;
     }
 
     /// <summary>
-    /// ¾ÆÀÌÅÛ ¸ðµ¨À» Á¦°ÅÇÏ´Â ÇÔ¼ö
+    /// ì•„ì´í…œ ëª¨ë¸ì„ ì œê±°í•˜ëŠ” í•¨ìˆ˜
     /// </summary>
     public void ClearItemModel()
     {
@@ -33,7 +33,7 @@ public class DraggingSlot : MonoBehaviour
     }
 
     /// <summary>
-    /// ¾ÆÀÌÄÜÀ» ¼³Á¤ÇÏ´Â ÇÔ¼ö
+    /// ì•„ì´ì½˜ì„ ì„¤ì •í•˜ëŠ” í•¨ìˆ˜
     /// </summary>
     /// <param name="icon"></param>
     public void SetIcon(Sprite icon)
@@ -42,7 +42,7 @@ public class DraggingSlot : MonoBehaviour
     }
 
     /// <summary>
-    /// ¾ÆÀÌÄÜÀ» Á¦°ÅÇÏ´Â ÇÔ¼ö
+    /// ì•„ì´ì½˜ì„ ì œê±°í•˜ëŠ” í•¨ìˆ˜
     /// </summary>
     public void ClearIcon()
     {
@@ -50,7 +50,7 @@ public class DraggingSlot : MonoBehaviour
     }
 
     /// <summary>
-    /// ¼±ÅÃÇßÀ» ¶§ÀÇ ½½·Ô ÀÎµ¦½º¸¦ ÀúÀåÇÏ±â À§ÇÑ ÇÔ¼ö
+    /// ì„ íƒí–ˆì„ ë•Œì˜ ìŠ¬ë¡¯ ì¸ë±ìŠ¤ë¥¼ ì €ìž¥í•˜ê¸° ìœ„í•œ í•¨ìˆ˜
     /// </summary>
     /// <param name="index"></param>
     public void SetFromSlotIndex(int index)

@@ -158,8 +158,8 @@ public class InventorySlotController : MonoBehaviour
         _draggingSlot.gameObject.SetActive(true);
 
         // 원본 슬롯에서 아이템 제거
-        _inventorySlotPresenters[index].InventorySlot.SetItemModel(null);
-        _inventorySlotPresenters[index].InventorySlotView.ClearIcon();
+        //_inventorySlotPresenters[index].InventorySlot.SetItemModel(null);
+        //_inventorySlotPresenters[index].InventorySlotView.ClearIcon();
     }
 
     /// <summary>
